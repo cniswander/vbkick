@@ -142,7 +142,7 @@ wait wait wait
 
 Special keys:
 
-`<Wait>` -  help control boot flow within vbkick (FYI: can not be use directly with VBoxManage)  
+`<Wait>` -  help control boot flow within vbkick (FYI: can not be use directly with VBoxManage)  Tells vbkick to sleep for 1 second.
 
 ```
 $ VBoxManage controlvm VM_NAME keyboardputscancode $(printf "Hello <Wait> VM" | convert_2_scancode.py)
