@@ -142,7 +142,7 @@ wait wait wait
 
 Special keys:
 
-`<Wait>` -  help control boot flow within vbkick (FYI: can not be use directly with VBoxManage)
+`<Wait>` -  help control boot flow within vbkick (FYI: can not be use directly with VBoxManage)  
 
 ```
 $ VBoxManage controlvm VM_NAME keyboardputscancode $(printf "Hello <Wait> VM" | convert_2_scancode.py)
@@ -150,6 +150,23 @@ VBoxManage: error: Error: 'wait' is not a hex byte!
 ```
 
 `<Multiply(what, N)>` - repeat "what" N times
+
+`<Lt>` - Lets you type < (the 'less than' key) in a context where it would otherwise be interpreted as part of a longer expression.
+
+Metakey expressions:
+
+Inside angle brackets, one or more metakey names such as Ctrl, Alt, Shift, Win, RAlt (right Alt), RCtrl, or RWin, finally followed by a character or keyname.  Up to 4 metakeys may be incorporated into a metakey expression.  The final, non-meta key is actually optional.
+
+Example metakey expressions:
+
+`<AltTab>` - While holding down the Alt key, press and release the Tab key.
+
+`<CtrlShiftt>` - While holding down the Ctrl and Shift keys, press and release the t key.
+
+`<CtrlT>` - This is equivalent to `<CtrlShiftt>`, because convert_2_scancode.py interprets 'T' as depress the Shift key, depress the t key, release the t key, and release the Shift key.
+
+`<Win>` - Depress and release the 'Windows' key.
+
 
 # Bibliography
  - [veewee](https://github.com/jedi4ever/veewee)
